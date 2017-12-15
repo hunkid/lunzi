@@ -1,6 +1,7 @@
 /**
  * 实现最核心的东西，不对reducer类型等做检测，暂未考虑健壮性
  * reducer必须：1.纯函数；2.未改变的state其余部分，原样返回
+ * createStore制造出来需要dispatch一次，这样可以使最初的store不会undefined，这里还没做
  * @param {object} state 
  * @param {function} reducer 
  */

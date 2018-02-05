@@ -1,0 +1,30 @@
+{
+  "name": "mvvm-es6",
+  "version": "1.0.0",
+  "description": "es6 mvvm vue",
+  "main": "dist/mvvm.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node build/devServer.js",
+    "build": "npm run build:lib && npm run build:docs",
+    "build:lib": "webpack --progress --hide-modules && set NODE_ENV=production webpack --progress --hide-modules",
+    "build:docs": "set NODE_ENV=production webpack --progress --hide-modules --config ./build/webpack.doc.conf.js"
+  },
+  "keywords": [
+    "es6",
+    "mvvm",
+    "vue",
+    "js"
+  ],
+  "author": "Seant",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2",
+    "webpack-merge": "^4.1.0"
+  }
+}
